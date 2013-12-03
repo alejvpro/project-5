@@ -6,6 +6,7 @@
     <script type="text/javascript" src="autosuggest.js"></script>
 	<script type="text/javascript" src="suggestions.js"></script>
 	<link rel="stylesheet" type="text/css" href="autosuggest.css" />
+	<link rel="stylesheet" type="text/css" href="style.css" /> 
 	<script type="text/javascript">
     	window.onload = function () {
     	    var oTextbox = new AutoSuggestControl(document.getElementById("txt1"), new GoogleSuggestions());        
@@ -13,6 +14,12 @@
 	</script> 
 </head>
 <body>
+
+<div id="nav-bar">
+<img src="images/logo.png" id="ebay-logo">
+</div>
+
+<div id="content">
 
 	<p>Search a new item below and hit submit!</p>
 
@@ -63,6 +70,7 @@ out.println("<a href=\"search?" + next + "\">Next</a>");
 }
 %>
 
+</div>
 
 </body>
 </html>

@@ -5,6 +5,7 @@
 <html>
 <head>
     <title>Item result</title>
+	<link rel="stylesheet" type="text/css" href="style.css" /> 
 </head>
 
 <style type="text/css">
@@ -14,6 +15,12 @@
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 
 <body>
+
+<div id="nav-bar">
+<img src="images/logo.png" id="ebay-logo">
+</div>
+
+<div id="content">
 
 	<p>Enter an item ID below to see it's info</p>
 
@@ -130,7 +137,7 @@
             google.maps.event.addDomListener(window, 'load', initialize);
         </script>
 
-
+</div>
 
 	
 </body>
