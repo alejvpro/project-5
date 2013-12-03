@@ -1,84 +1,71 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<title>Search here!</title>
+		<link rel="stylesheet" type="text/css" href="style.css" /> 
+		<link rel="stylesheet" type="text/css" href="autosuggest.css" /> 
+		<script type="text/javascript" src="autosuggest.js"></script>
+		<script type="text/javascript" src="suggestions.js"></script>
+		<script type="text/javascript">
+    		window.onload = function () {
+        		var oTextbox = new AutoSuggestControl(document.getElementById("txt1"), new GoogleSuggestions());        
+    		}
+		</script>
+	</head>
+    
+    
+	<body>
 
-<head>
-<title>Search here!</title>
-<script type="text/javascript" src="autosuggest.js"></script>
-<script type="text/javascript" src="suggestions.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css" /> 
-<link rel="stylesheet" type="text/css" href="autosuggest.css" /> 
-<script type="text/javascript">
-    window.onload = function () {
-        var oTextbox = new AutoSuggestControl(document.getElementById("txt1"), new GoogleSuggestions());        
-    }
-</script>
-</head>
+		<div id="nav-bar">
+			<div id="logo-container">
+				<img src="images/logo.png" id="logo">
+			</div>
+			<div id="menu-button">
+				Menu
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">Search</a></li>
+					<li><a href="">Item</a></li>
+				<ul>
+			</div>
+		</div>
+	
+		<div id="content">
 
-<body>
+			<h1>Keyword Search</h1>
 
-<div id="nav-bar">
-<div id="logo-container">
-<img src="images/logo.png" id="logo">
-</div>
-<div id="menu-button">
-	Menu
-</div>
-<div id="menu">
-	<ul>
-		<li><a href="">Home</a></li>
-		<li><a href="">Search</a></li>
-		<li><a href="">Item</a></li>
-	<ul>
-</div>
-</div>
+			<p>Enter a search below and hit submit!</p>
 
-<div id="content">
-<h1>Keyword Search</h1>
+			<form action="search" method="GET">
+				Keywords: <input type="text" name="q" id="txt1">
+				<input type="hidden" name="numResultsToSkip" value="0" /> 
+				<input type="hidden" name="numResultsToReturn" value="20" /> 
+				<input type="submit" /> 
+			</form>
 
-<p>Enter a search below and hit submit!</p>
+		</div>
 
-<!-- 
-A form where the user can enter and submit a keyword query. 
-The form's action should point to http://localhost:8080/eBay/search
-
-It should pass three parameters: 
-	1) q, whose value contains the set of keywords the user types
-	2) numResultsToSkip, whose value specifies how many items to skip from the beginning
-	3) numResultsToReturn, whose value tells how many items to return (or display). 
-
-Let users enter only the value for q and let the form automatically generate appropriate 
-values for numResultsToSkip and numResultsToReturn for nice display. Note that the 
-provided web.xml file maps the request to http://localhost:8080/eBay/search to the 
-SearchServlet class.
--->
-
-<form action="search" method="GET">
-  Keywords: <input type="text" name="q" id="txt1">
-  <input type="hidden" name="numResultsToSkip" value="0" /> 
-  <input type="hidden" name="numResultsToReturn" value="20" /> 
-  <input type="submit" /> 
-</form>
-
-</div>
-
-<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-<script>
-$(document).ready(
-    function(){
-        $("#menu-button").click(function () {
-            $("#menu").toggle();
-        });
-    });
-
-var $window = $(window);
-$window.resize(
-	function() {
-    	if($window.width() >= 600)
-         	$("#menu").show();
-         else
-         	$("#menu").hide();
-    });
-
-</script>
-</body>
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(
+			    function(){
+			        $("#menu-button").click(function () {
+			            $("#menu").toggle();
+			        });
+			    });
+			var $window = $(window);
+			$window.resize(
+				function() {
+			    	if($window.width() >= 600)
+			         	$("#menu").show();
+			         else
+			         	$("#menu").hide();
+			    });
+		</script>	
+	</body>
+	    
+    
 </html>
+
