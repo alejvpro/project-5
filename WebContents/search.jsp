@@ -16,7 +16,19 @@
 <body>
 
 <div id="nav-bar">
-<img src="images/logo.png" id="ebay-logo">
+<div id="logo-container">
+<img src="images/logo.png" id="logo">
+</div>
+<div id="menu-button">
+	Menu
+</div>
+<div id="menu">
+	<ul>
+		<li><a href="">Home</a></li>
+		<li><a href="">Search</a></li>
+		<li><a href="">Item</a></li>
+	<ul>
+</div>
 </div>
 
 <div id="content">
@@ -72,5 +84,24 @@ out.println("<a href=\"search?" + next + "\">Next</a>");
 
 </div>
 
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script>
+$(document).ready(
+    function(){
+        $("#menu-button").click(function () {
+            $("#menu").toggle();
+        });
+    });
+
+var $window = $(window);
+$window.resize(
+	function() {
+    	if($window.width() >= 600)
+         	$("#menu").show();
+         else
+         	$("#menu").hide();
+    });
+
+</script>
 </body>
 </html>

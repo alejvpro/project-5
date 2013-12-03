@@ -11,21 +11,111 @@ h1 {
 }
 
 #nav-bar {
+	font-family: 'Oswald', sans-serif;
 	background-color:#000000;
 	width: 100%;
 	position: fixed;
 	top: 0px;
 }
 
-#ebay-logo {
+#logo-container {
+	display: block;
+	margin-left:25%;
+	float: left;
+	width: 50%;
+	padding-top: 3px;
+	padding-bottom: 4px;
+}
+
+#logo {
 	display: block;
 	margin-left:auto;
 	margin-right:auto;
-	padding: 3px;
 }
 
+#menu-button {
+	display: block;
+	color: #FFFFFF;
+	float: left;
+	margin-top: 15px;
+	margin-bottom:10px;
+	width: 25%;
+}
+
+#menu {
+	display: none;
+	clear: both;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+li {
+	color:#FFFFFF;
+	margin-left: auto;
+	margin-right: auto;
+}
+	
+a {
+	text-align:center;
+	color:#FFFFFF;
+	display:block;
+}
+	
+	
 #content {
 	margin-top: 50px;
 	margin-left: 25px;
 	margin-right: 25px;
+}
+
+
+@media (min-width: 600px) {
+	#logo-container {
+		display: block;
+		margin-left: 5%;
+		padding: 3px;
+		float: left;
+		width: 20%
+	}
+	
+	#logo {
+		text-align:left;
+	}
+	
+	#menu-button {
+		display: none;
+	}
+
+	#menu {
+		display: block;
+		margin-right: 5%;
+		margin-top: 15px;
+		width: 60%;
+		float: left;
+		clear: none;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	li {
+		color:#FFFFFF;
+		float:right;
+		width:15%;
+	}
+	
+	a {
+		text-align:right;
+		color:#FFFFFF;
+		display:block;
+	}
 }
