@@ -89,6 +89,8 @@ li a {
 	
 	#logo {
 		text-align:left;
+		margin-left:0px;
+		margin-right:0px;
 	}
 	
 	#menu-button {
