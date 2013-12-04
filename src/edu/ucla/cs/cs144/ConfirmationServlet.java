@@ -15,12 +15,7 @@ public class ConfirmationServlet extends HttpServlet implements Servlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
-    	PrintWriter out = response.getWriter();
-		out.println("<html>");
-		out.println("<body>");
-		out.println("Confirmation page under construction");
-		out.println("</body>");
-		out.println("</html>");
+		request.getRequestDispatcher("/confirmation.jsp").forward(request, response);
 		
     	/*String itemId = request.getParameter("id");
     	

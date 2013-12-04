@@ -15,13 +15,7 @@ public class PayServlet extends HttpServlet implements Servlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
-    	PrintWriter out = response.getWriter();
-		out.println("<html>");
-		out.println("<body>");
-		out.println("Pay page under construction");
-		out.println("<a href=\"confirmation\">Submit Payment</a>");
-		out.println("</body>");
-		out.println("</html>");
+		request.getRequestDispatcher("/pay.jsp").forward(request, response);
 		
     	/*String itemId = request.getParameter("id");
     	

@@ -1,0 +1,55 @@
+<%@ page import="edu.ucla.cs.cs144.SearchResult" %>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pay Now</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+    
+    
+	<body>
+
+		<div id="nav-bar">
+			<div id="logo-container">
+				<img src="images/logo.png" id="logo">
+			</div>
+			<div id="menu-button">
+				Menu
+			</div>
+			<div id="menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="keywordSearch.html">Search</a></li>
+				<ul>
+			</div>
+		</div>
+	
+		<div id="content">
+			<h1>Pay Now</h1>
+			Under construction. <br>
+			<a href="confirmation">Submit Payment</a>
+		</div>
+
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(
+			    function(){
+			        $("#menu-button").click(function () {
+			            $("#menu").toggle();
+			        });
+			    });
+			var $window = $(window);
+			$window.resize(
+				function() {
+			    	if($window.width() >= 600)
+			         	$("#menu").show();
+			         else
+			         	$("#menu").hide();
+			    });
+		</script>	
+	</body>
+	    
+    
+</html>
+
