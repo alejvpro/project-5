@@ -60,7 +60,7 @@ li {
 	margin-right: auto;
 }
 	
-a {
+li a {
 	text-align:center;
 	color:#FFFFFF;
 	display:block;
@@ -113,7 +113,7 @@ a {
 		width:15%;
 	}
 	
-	a {
+	li a {
 		text-align:right;
 		color:#FFFFFF;
 		display:block;
