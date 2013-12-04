@@ -28,8 +28,19 @@
 	
 		<div id="content">
 			<h1>Pay Now</h1>
-			Under construction. <br>
-			<a href="confirmation">Submit Payment</a>
+			
+			<%
+			String link = (String)request.getAttribute("link");
+			%>
+
+			<form action="<%= link %>" method="POST">
+				
+				Keywords: <input type="text" name="q" id="txt1">
+				<input type="hidden" name="numResultsToSkip" value="0" /> 
+				<input type="hidden" name="numResultsToReturn" value="20" /> 
+				<input type="submit" /> 
+			</form>
+
 		</div>
 
 		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>

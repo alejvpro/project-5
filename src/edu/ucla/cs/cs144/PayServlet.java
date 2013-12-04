@@ -3,11 +3,14 @@ package edu.ucla.cs.cs144;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import java.util.HashMap;
+
 import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class PayServlet extends HttpServlet implements Servlet {
        
@@ -43,7 +46,7 @@ public class PayServlet extends HttpServlet implements Servlet {
         }
         else
         {
-            HashMap<String, String> itemPrices = (HashMap<String, String)session.getAttribute("itemPrices");
+            HashMap<String, String> itemPrices = (HashMap<String, String>)session.getAttribute("itemPrices");
 
             if (itemPrices == null)
             {
@@ -65,7 +68,7 @@ public class PayServlet extends HttpServlet implements Servlet {
             else if(itemPrices.contains(itemId))
             {
                 // Display normally using itemPRices Price
-
+                // CHECK
                 request.setAttribute("link", "https://" + request.getServerName() + "/" + request.getContextPath());
                 request.getRequestDispatcher("/pay.jsp").forward(request, response);
             }
