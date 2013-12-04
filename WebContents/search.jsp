@@ -4,6 +4,7 @@
 <html>
 	<head>
 		<title>Search Results</title>
+		<meta name="viewport" content="initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<link rel="stylesheet" type="text/css" href="autosuggest.css" />
 		<script type="text/javascript" src="autosuggest.js"></script>
