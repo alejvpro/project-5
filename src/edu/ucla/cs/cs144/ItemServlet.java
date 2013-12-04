@@ -34,15 +34,15 @@ public class ItemServlet extends HttpServlet implements Servlet {
     			HttpSession session = request.getSession(true);
     			
     			// Check if session already has previous items
-    			HashMap<String, String> itemPrices = (HashMap<String, String>)session.getAttribute("itemPrices");
+    			HashMap<String, ItemBean> itemPrices = (HashMap<String, ItemBean>)session.getAttribute("itemPrices");
     			if (itemPrices == null) 
     			{
     				// Create a new session if neccessary
-    				itemPrices = new HashMap<String, String>();
+    				itemPrices = new HashMap<String, ItemBean>();
     			}
     			
-    			// Add this item's price
-				itemPrices.put(item.getItemId(), item.getBuyPrice());
+    			// Add this item
+				itemPrices.put(item.getItemId(), item);
 				
 				// Set or reset the session's item HashMap
 				session.setAttribute("itemPrices", itemPrices);
