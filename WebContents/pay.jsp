@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<title>Pay Now</title>
-		<meta name="viewport" content="initial-scale=1">
+		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
     

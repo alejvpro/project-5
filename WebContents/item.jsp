@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<title>Item Result</title>
-		<meta name="viewport" content="initial-scale=1">
+		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<style type="text/css">
 			#google-map {height: 300px; width: 400px;}

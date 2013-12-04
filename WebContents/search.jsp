@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<title>Search Results</title>
-		<meta name="viewport" content="initial-scale=1">
+		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<link rel="stylesheet" type="text/css" href="autosuggest.css" />
 		<script type="text/javascript" src="autosuggest.js"></script>
@@ -39,7 +39,7 @@
 			<p>Search a new item below and hit submit!</p>
 
 			<form action="search" method="GET">
-  				Keywords: <input type="text" name="q" id="txt1"><br>
+  				Keywords: <input type="text" name="q" id="txt1" style="max-width:100%;"><br>
   				<input type="hidden" name="numResultsToSkip" value="0" /> 
   				<input type="hidden" name="numResultsToReturn" value="20" /> 
   				<input type="submit" /> 
