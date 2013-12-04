@@ -18,7 +18,8 @@ public class PayServlet extends HttpServlet implements Servlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
-		
+         request.getRequestDispatcher("/pay.jsp").forward(request, response);
+	/*
         String itemId = request.getParameter("id");
 
         // basically it first gets
@@ -65,6 +66,7 @@ public class PayServlet extends HttpServlet implements Servlet {
                 out.println("</body>");
                 out.println("</html>"); 
             }
+            String key = itemPrices.get(Key)
             else if(itemPrices.contains(itemId))
             {
                 // Display normally using itemPRices Price
