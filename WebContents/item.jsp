@@ -18,7 +18,7 @@
 
 		<div id="nav-bar">
 			<div id="logo-container">
-				<img src="images/logo.png" id="logo">
+				<a href="index.html"><img src="images/logo.png" id="logo"></a>
 			</div>
 			<div id="menu-button">
 				Menu
