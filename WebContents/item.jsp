@@ -86,6 +86,7 @@
    				<h2> Bidding Info </h2>
    				Currently: <%= item.getCurrently() %>. <br>
    				First Bid: <%= item.getFirstBid() %>. <br>
+   				Buy Price: <%= item.getBuyPrice() %>. <br>
    				Number of Bids: <%= item.getNumberOfBids() %>. <br>
    			</p>
 

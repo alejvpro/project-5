@@ -197,6 +197,7 @@ public class BeanParser {
         itemBean.setCategories(parseCategories(getElementsByTagNameNR(itemElement, "Category")));
         itemBean.setCurrently(getElementTextByTagNameNR(itemElement, "Currently"));
         itemBean.setFirstBid(getElementTextByTagNameNR(itemElement, "First_Bid"));
+        itemBean.setBuyPrice(getElementTextByTagNameNR(itemElement, "Buy_Price"));
         itemBean.setNumberOfBids(getElementTextByTagNameNR(itemElement, "Number_of_Bids"));
         itemBean.setBids(parseBids(getElementByTagNameNR(itemElement, "Bids")));
         itemBean.setLocation(getElementTextByTagNameNR(itemElement, "Location"));

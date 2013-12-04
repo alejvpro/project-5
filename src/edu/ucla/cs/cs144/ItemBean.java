@@ -8,6 +8,7 @@ public class ItemBean {
 	private String[] categories;
 	private String currently;
 	private String firstBid;
+	private String buyPrice;
 	private String numberOfBids;
 	private BidBean[] bids;
 	private String location;
@@ -57,6 +58,14 @@ public class ItemBean {
 
 	public void setFirstBid(String firstBid) {
 		this.firstBid = firstBid;
+	}
+	
+	public String getBuyPrice() {
+		return buyPrice;
+	}
+
+	public void setBuyPrice(String buyPrice) {
+		this.buyPrice = buyPrice;
 	}
 
 	public String getNumberOfBids() {
