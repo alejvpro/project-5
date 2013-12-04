@@ -48,7 +48,7 @@
 			%>
 	
 			<p>
-				Item <br>
+				<h2> Item </h2>
    				Id: <%= item.getItemId() %>. <br>
    				Name: <%= item.getName() %>. <br>
    				Location: <%= item.getLocation() %>. <br>
@@ -58,12 +58,12 @@
    			</p>
    	
    			<p>
-   				Description<br>
+   				<h2> Description </h2>
    				<%= item.getDescription() %>. <br>
    			</p>
    	
    			<p>
-   				Categories <br>
+   				<h2> Categories </h2>
    				<% String[] categories = item.getCategories();
     			for (int i = 0; i < categories.length; i++) {
         		%>
@@ -75,7 +75,7 @@
    			</p>
    	
    			<p>
-   				Seller <br>
+   				<h2> Seller </h2>
    				Id: <%= seller.getUserId() %>. <br>
    				Rating: <%= seller.getRating() %>. <br>
    				Location: <%= item.getLocation() %>. <br>
@@ -83,14 +83,14 @@
    			</p>
    	
    			<p>	
-   				Bidding Info <br>
+   				<h2> Bidding Info </h2>
    				Currently: <%= item.getCurrently() %>. <br>
    				First Bid: <%= item.getFirstBid() %>. <br>
    				Number of Bids: <%= item.getNumberOfBids() %>. <br>
    			</p>
 
    			<p>
-   				Bids <br>
+   				<h2> Bids </h2>
    				<% BidBean[] bids = item.getBids(); 
    				for (int i = 0; i < bids.length; i++) {
    					BidBean bid = bids[i];
@@ -98,7 +98,7 @@
    				%>
    				
    				<p>
-   					Bid<br>
+   					<b>Bid</b><br>
    				
    					Bidder<br>
    					Id: <%= bidder.getUserId() %>. <br>
@@ -117,6 +117,8 @@
    				%>
 			</p>
 
+			<h2> Map </h2>
+			
 			<div id="google-map"></div>
 
  			<script>
