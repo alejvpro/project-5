@@ -9,7 +9,7 @@
 		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<style type="text/css">
-			#google-map {height: 300px; width: 400px;}
+			#google-map {height: 300px; width: 100%; max-width: 525px}
 		</style>
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 	</head>
@@ -162,6 +162,9 @@
             	}
             	google.maps.event.addDomListener(window, 'load', initialize);
         	</script>
+        	
+        	<br>
+        	<br>
 
 		</div>
 
