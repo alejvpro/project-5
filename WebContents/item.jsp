@@ -94,8 +94,13 @@
    			</p>
 
    			<p>
-   				<h2> Bids </h2>
-   				<% BidBean[] bids = item.getBids(); 
+   				
+   				
+   				<% BidBean[] bids = item.getBids();
+   				if(bids.length > 0) {
+   				%>
+   					<h2> Bids </h2>
+   				<% }
    				for (int i = 0; i < bids.length; i++) {
    					BidBean bid = bids[i];
    					UserBean bidder = bid.getBidder();
