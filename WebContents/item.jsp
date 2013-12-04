@@ -89,7 +89,7 @@
    				<% if(item.getBuyPrice() != null && !item.getBuyPrice().equals("")) {
    				%>
    					Buy Price: <%= item.getBuyPrice() %>. <br>
-   					<a href="pay">Pay Now</a> <br>
+   					<a href="pay?id=<%= item.getItemId()%>">Pay Now</a> <br>
    				<%}%>
    			</p>
 
