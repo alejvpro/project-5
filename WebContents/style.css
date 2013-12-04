@@ -69,6 +69,10 @@ li a {
 	color:#FFFFFF;
 	display:block;
 }
+
+input {
+	max-width:100%;
+}
 	
 	
 #content {
