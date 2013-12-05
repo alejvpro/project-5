@@ -58,7 +58,8 @@ public class PayServlet extends HttpServlet implements Servlet {
 
             // Display normally using itemPRices Price
             // CHECK
-            request.setAttribute("link", "https://" + request.getServerName() + "/" + request.getContextPath());
+            request.setAttribute("link", "https://localhost:8443/eBay/confirmation");
+            request.setAttribute("item", item);
             request.getRequestDispatcher("/pay.jsp").forward(request, response);
 
 

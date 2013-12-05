@@ -1,4 +1,5 @@
 <%@ page import="edu.ucla.cs.cs144.SearchResult" %>
+<%@ page import="edu.ucla.cs.cs144.ItemBean" %>
 
 <!DOCTYPE html>
 <html>
@@ -30,16 +31,20 @@
 			<h1>Pay Now</h1>
 			
 			<%
-			String link = (String)request.getAttribute("link");
+			ItemBean item = (ItemBean)request.getAttribute("item");
 			%>
 
-			<form action="<%= link %>" method="POST">
+			<p>
+				Id: <%= item.getItemId() %>. <br>
+   				Name: <%= item.getName() %>. <br>
+				Buy Price: <%= item.getBuyPrice() %>. <br>
+			<form action="<%=(String)request.getAttribute("link")%>" method="POST">
 				
-				Keywords: <input type="text" name="q" id="txt1">
-				<input type="hidden" name="numResultsToSkip" value="0" /> 
-				<input type="hidden" name="numResultsToReturn" value="20" /> 
-				<input type="submit" /> 
+				Credit Card: <input type="text" name="card">
+				<input type="hidden" name="id" value="<%= item.getItemId() %>" /> 
+				<input type="submit" value="Purchase"/> 
 			</form>
+
 
 		</div>
 
