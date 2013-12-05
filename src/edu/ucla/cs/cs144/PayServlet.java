@@ -18,8 +18,7 @@ public class PayServlet extends HttpServlet implements Servlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
-         request.getRequestDispatcher("/pay.jsp").forward(request, response);
-	/*
+
         String itemId = request.getParameter("id");
 
         // basically it first gets
@@ -30,68 +29,38 @@ public class PayServlet extends HttpServlet implements Servlet {
 
         if (session == null)
         {
-            PrintWriter out = response.getWriter();
-            out.println("<html>");
-            out.println("<body>");
-            out.println("<h1>No results found! Please try searching again</h1>");
-            
-            out.println("<p>Enter an item ID below to see it's info</p>");
-
-            out.println("<form action=\"item\" method=\"GET\">");
-            out.println("Item Id: <input type=\"text\" name=\"id\"><br>");
-            out.println("<input type=\"submit\" />");
-            out.println("</form>");
-            
-            out.println("</body>");
-            out.println("</html>"); 
+            request.setAttribute("error", "No previous session detected. How did you get here?");
+            request.getRequestDispatcher("/error.jsp").forward(request, response);
+            return; 
         }
         else
         {
-            HashMap<String, String> itemPrices = (HashMap<String, String>)session.getAttribute("itemPrices");
+            HashMap<String, ItemBean> itemPrices = (HashMap<String, ItemBean>)session.getAttribute("itemPrices");
 
             if (itemPrices == null)
             {
-                PrintWriter out = response.getWriter();
-                out.println("<html>");
-                out.println("<body>");
-                out.println("<h1>No results found! Please try searching again</h1>");
-                
-                out.println("<p>Enter an item ID below to see it's info</p>");
+                request.setAttribute("error", "No items previously viewed");
+                request.getRequestDispatcher("/error.jsp").forward(request, response);
+                return;
 
-                out.println("<form action=\"item\" method=\"GET\">");
-                out.println("Item Id: <input type=\"text\" name=\"id\"><br>");
-                out.println("<input type=\"submit\" />");
-                out.println("</form>");
-                
-                out.println("</body>");
-                out.println("</html>"); 
             }
-            String key = itemPrices.get(Key)
-            else if(itemPrices.contains(itemId))
+
+            // RIGHT HERE..need to display itemPrices price.?
+
+            ItemBean item = itemPrices.get(itemId);
+
+            if (item == null)
             {
-                // Display normally using itemPRices Price
-                // CHECK
-                request.setAttribute("link", "https://" + request.getServerName() + "/" + request.getContextPath());
-                request.getRequestDispatcher("/pay.jsp").forward(request, response);
+                request.setAttribute("error", "No previous session detected. How did you get here?");
+                request.getRequestDispatcher("/error.jsp").forward(request, response);
+                return; 
             }
-            else
-            {
-                PrintWriter out = response.getWriter();
-                out.println("<html>");
-                out.println("<body>");
-                out.println("<h1>No results found! Please try searching again</h1>");
-                
-                out.println("<p>Enter an item ID below to see it's info</p>");
 
-                out.println("<form action=\"item\" method=\"GET\">");
-                out.println("Item Id: <input type=\"text\" name=\"id\"><br>");
-                out.println("<input type=\"submit\" />");
-                out.println("</form>");
-                
-                out.println("</body>");
-                out.println("</html>"); 
+            // Display normally using itemPRices Price
+            // CHECK
+            request.setAttribute("link", "https://" + request.getServerName() + "/" + request.getContextPath());
+            request.getRequestDispatcher("/pay.jsp").forward(request, response);
 
-            }
 
 
 
