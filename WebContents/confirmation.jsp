@@ -28,7 +28,17 @@
 	
 		<div id="content">
 			<h1>Confirmation</h1>
-			Under construction. <br>
+			
+			<%
+			ItemBean item = (ItemBean)request.getAttribute("item");
+			%>
+			
+			<p>
+				Id: <%= item.getItemId() %>. <br>
+   				Name: <%= item.getName() %>. <br>
+				Buy Price: <%= item.getBuyPrice() %>. <br>
+				Credit Card: <%= (String)request.getAttribute("card") %>. <br>
+				Time: <%= (String)request.getAttribute("time") %>. <br>
 		</div>
 
 		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>

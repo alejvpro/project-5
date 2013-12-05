@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import java.util.HashMap;
+import java.util.Date;
 
 import javax.servlet.Servlet;
 import javax.servlet.ServletException;
@@ -59,8 +60,10 @@ public class ConfirmationServlet extends HttpServlet implements Servlet {
     	
     	// TODO: Check credit card information
     	
-    	// Set the purchased item attribute for the view and forward the request
+    	// Set attributes for the view and forward the request
     	request.setAttribute("item", item);
+    	request.setAttribute("card", creditCard);
+    	request.setAttribute("time", new Date().toString());
 		request.getRequestDispatcher("/confirmation.jsp").forward(request, response);
     }
 }
