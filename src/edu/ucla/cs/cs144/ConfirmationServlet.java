@@ -17,7 +17,7 @@ public class ConfirmationServlet extends HttpServlet implements Servlet {
        
     public ConfirmationServlet() {}
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
     	// Confirm the connection is secure
     	if(!request.isSecure())
