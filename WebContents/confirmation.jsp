@@ -1,4 +1,5 @@
 <%@ page import="edu.ucla.cs.cs144.SearchResult" %>
+<%@ page import="edu.ucla.cs.cs144.ItemBean" %>
 
 <!DOCTYPE html>
 <html>
